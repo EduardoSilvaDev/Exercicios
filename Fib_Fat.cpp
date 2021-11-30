@@ -29,13 +29,12 @@ bool verifica(){
 	}
 }
 int main(){
-	setlocale(LC_ALL,"Portuguese");
+	setlocale(LC_ALL,"Portuguese");//Acentuação
 	int i, n;
-	char ver='a';
 	bool cont=true;
 	
 	while(cont==true){
-		while(i<0||i>2){
+		for(i=-1;i<0||i>2;){
 			cout << "1  - Fatorial\n2 - Fibonacci\n0 - Sair\n> ";
 			cin >> i;
 			system("cls");
@@ -45,17 +44,16 @@ int main(){
 		else if(i==1){
 			cout << "Digite um numero para calcular no algoritmo fatorial: ";
 			cin >> n;
-			cout << "\n\nO Fatorial de " <<n<< " �: " <<fat(n)<< endl;
+			cout << "\n\nO Fatorial de " <<n<< " é: " <<fat(n)<< endl;
 		}
 		else if(i==2){
 			cout << "Digite um numero para calcular no algoritmo de fibonacci: ";
 			cin >> n;
-			cout << "\n\nO valor Fibonacci de " <<n<< " �: " <<fib(n)<< endl;
+			cout << "\n\nO valor Fibonacci de " <<n<< " é: " <<fib(n)<< endl;
 		}
 		system("pause>null");
 		system("cls");
 		cont=verifica();
-		if(cont==true)i=3;
 	}
 	
 	system("cls");
